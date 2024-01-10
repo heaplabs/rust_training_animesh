@@ -4,10 +4,11 @@ fn main() {
     if_else();
     if_else_expression();
     loop_exp();
+    while_loop();
+    for_loop();
 }
 
 fn if_condition_success() {
-
     let number = 3;
 
     if number < 5 {
@@ -18,7 +19,6 @@ fn if_condition_success() {
 }
 
 fn if_condition_fail() {
-
     let number = 7;
 
     if number < 5 {
@@ -27,6 +27,7 @@ fn if_condition_fail() {
         println!("condition was false");
     }
 }
+
 fn if_else() {
     let number = 6;
 
@@ -41,12 +42,13 @@ fn if_else() {
     }
 }
 
-fn if_else_expression () {
+fn if_else_expression() {
     let condition = true;
     let number = if condition { 5 } else { 6 }; //note if we make the else { 6; } making it an statement rather than an expression the type of number will still be i32
 
     println!("The value of number is: {number}");
 }
+
 fn loop_exp() {
     let mut counter = 0;
 
@@ -59,4 +61,24 @@ fn loop_exp() {
     };
 
     println!("The result is {result}");
+}
+
+fn while_loop() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+
+fn for_loop() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
 }

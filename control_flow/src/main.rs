@@ -56,8 +56,9 @@ fn loop_exp() {
         counter += 1;
 
         if counter == 10 {
-            break counter * 2;
+            break 'count_to_10 counter * 2;
         }
+
     };
 
     println!("The result is {result}");
